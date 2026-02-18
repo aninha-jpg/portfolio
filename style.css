@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor1: #0A002E;
+    --cor2: #010103;
+    --cor3: #3F2C83;
+    --cor4: #6957AD;
+    --cor5: #A090D8;
+    --cor6: #DED4FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    background-color: #6957AD;
+    overflow-x: hidden;
+}
+
+header {
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+header > nav {
+    top: 0;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    padding: 2px;
+    position: fixed;
+    background: #3F2C83;
+    background: radial-gradient(circle, rgba(63, 44, 131, 1) 10%, rgba(105, 87, 173, 1) 82%);
+    z-index: 2;
+}
+
+nav > a {
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    margin-right: 15px;
+}
+
+.img-circulo {
+    background-color: var(--cor3);
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+    left: -30%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+}
+
+.seta {
+    color: var(--cor3);
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.maquina-txt {
+    font-family: "Jua", Arial, Helvetica, sans-serif;
+    color: #A090D8;
+    font-size: 5em;
+    max-width: 480px;
+    z-index: 2;
+}
+
+.maquina-txt:after{
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
+
+@keyframes pisca{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+section#sobre {
+    min-height: 100dvh;
+}
+
+
+
+footer {
+    min-height: 100dvh;
+}
