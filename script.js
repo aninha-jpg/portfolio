@@ -13,12 +13,12 @@ function btnparagrafo(){
     }, 3000);
 }
 
-function typeWrite(elemento){
-    const textArray = elemento.innerHTML.split('');
-    elemento.innerHTML = '';
+function typeWrite(letras){
+    const textArray = letras.innerHTML.split('');
+    letras.innerHTML = '';
     textArray.forEach(function(letra, i){
         setTimeout(function(){
-            elemento.innerHTML += letra;
+            letras.innerHTML += letra;
         }, 180 * i,)
     });
 }
