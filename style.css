@@ -71,9 +71,10 @@ nav {
     padding: 0 50px;
     position: fixed;
     background: rgba(30, 32, 44, 0.95);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     justify-content: space-between;
     align-items: center;
+    -webkit-backdrop-filter: blur(12px);
     z-index: 1000;
     border-bottom: 1px solid #60519b6c;
     transition: top 0.5s ease-in-out;
@@ -104,6 +105,10 @@ nav > a {
     text-decoration: none;
     color: var(--cor3);
     margin-right: 15px;
+}
+
+.esconder-indice {
+    display: none;
 }
 
 /* Estilização do efeito máquina de escrever */ 
@@ -264,10 +269,27 @@ section#projetos h2 {
     text-align: center;
     font-size: 2em;
     margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+section#projetos h3 {
+    margin-bottom: 20px;
+}
+
+section#projetos ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    list-style: none;
+    flex-grow: 1;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
 }
 
 section#projetos li {
-    max-width: 100%;
+    max-width: 900px;
+    margin: 10px;
 }
 
 section#projetos a {
@@ -282,20 +304,37 @@ section#projetos p {
     text-align: left;
 }
 
-.lista-projetos {
-
-}
-
 .item-projeto{
-    background: var(--cor2); /* Um branco bem transparente */
-    backdrop-filter: blur(10px);          /* Desfoca o fundo (efeito vidro) */
+    background: var(--cor2);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     transition: 0.3s;
 }
 
 .item-projeto:hover {
+    background-color: var(--cor1);
     
+}
+
+.item-projeto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item-projeto button {
+    background-color: var(--cor2);
+    border: 1px solid var(--cor3);
+    margin: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.item-projeto button:hover{
+    background-color: var(--cor1);
 }
 
 
@@ -313,13 +352,13 @@ section#contato {
 }
 
 article#contato {
+    max-width: 900px;
     height: auto;
     border-radius: 20px;
-    margin: 3px auto;
+    margin: 2px auto;
     padding: 5px;
     text-align: center;
     transition: 0.4s;
-    max-width: 900px;
 }
 
 article#contato h2 {
@@ -329,19 +368,12 @@ article#contato h2 {
     margin-bottom: 50px;
 }
 
-article#contato li a {
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    gap: 20px;
-}
-
 article#contato ul {
     display: flex;
     flex-direction: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     padding: 0;
 }
 
@@ -350,10 +382,18 @@ article#contato li {
     flex-direction: wrap;
     padding: 20px;
     gap: 15px;
-    width: 250px;
+    min-width: 150px;
+    max-width: 250px;
     height: auto;
     padding: 0;
     box-shadow: rgba(255, 255, 255, 0.1) 1px 1px 1px;
+}
+
+article#contato li a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    gap: 20px;
 }
 
 /* Estilização do rodapé */ 
@@ -376,7 +416,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100dvh;
+        min-height: 100dvh;
         text-align: center;
         margin-left: 0;
     }
@@ -405,4 +445,16 @@ footer {
     .esconder {
         display: none;
     }
+
+    .esconder-indice {
+    display: block;
+    }
+
+    section#habilidades, section#sobre, section#projetos, section#contato {
+    margin: 20px 10px;
+    min-height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: block;
+}
 }
