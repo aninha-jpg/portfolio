@@ -137,7 +137,7 @@ nav > a {
 /* Main - Estilização da seção Sobre mim */ 
 
 section#sobre {
-    min-height: 100dvh;
+    min-height: auto;
     background-color: var(--cor4);
     backdrop-filter: blur(10px);
     max-width: 900px;
@@ -145,7 +145,7 @@ section#sobre {
     padding: 20px;
     line-height: 1.6;
     border-radius: 20px;
-    box-shadow: var(--cor4) 0px 2px 7px;
+    box-shadow: var(--cor3) 0px 2px 3px;
 }
 
 section#sobre h2 {
@@ -157,12 +157,12 @@ section#sobre h2 {
 section#sobre h3 {
     font-size: 1.5em;
     margin-bottom: 20px;
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
 }
 
 section#sobre p {
-    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 button {
@@ -181,19 +181,64 @@ button:hover {
     color: var(--cor1);
 }
 
-ul {
-    margin: 20px;
+/* Main - Estilização da seção ti e interesses */ 
+
+section#habilidades {
+    height: 80dvh;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    min-height: auto;
+    max-width: 900px;
+    margin: 0 auto;
     padding: 0;
-    list-style: none;
+    line-height: 1.6;
+}
+
+article#habilidades {
+    height: 80dvh;
+    font-size: 16px;
+    color: white;
+    height: auto;
+    max-width: 900px;
+    margin: 15px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cor2);
+    border-radius: 20px;
+    box-shadow: var(--cor3) 1px 2px 3px;
+}
+
+article#habilidades h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+article#habilidades p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+ul .skills{
+    display: flex;
+    flex-direction: wrap;
+    padding: 20px;
+    gap: 15px;
+    width: 250px;
+    height: auto;
+    padding: 0;
+    box-shadow: rgba(255, 255, 255, 0.1) 1px 1px 1px;
 }
 
 li {
-    display: flex;
-    border: 1px solid var(--cor3);
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-    margin: 3px auto;
-    max-width: 300px;
-    padding: 5px;
+    margin: 5px auto;
+    max-width: 500px;
+    padding: 20px;
     text-align: center;
     justify-content: center;
     gap: 12px;
@@ -202,13 +247,14 @@ li {
 
 li:hover {
     background-color: var(--cor3);
-    transform: scale(1.06);
+    transform: scale(1.03);
 }
 
 li img {
     width: 32px;
     height: 32px;
     display: block;
+    margin: 0 auto;
 }
 
 /* Estilização da seção Projetos */
@@ -236,11 +282,34 @@ section#projetos p {
     text-align: left;
 }
 
+.lista-projetos {
+
+}
+
+.item-projeto{
+    background: var(--cor2); /* Um branco bem transparente */
+    backdrop-filter: blur(10px);          /* Desfoca o fundo (efeito vidro) */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.item-projeto:hover {
+    
+}
+
 
 /* Estilização da seção Contato */ 
 
 article > h2, h3 {
     color: var(--cor3);
+}
+
+section#contato {
+    height: 80dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 article#contato {
@@ -249,8 +318,6 @@ article#contato {
     margin: 3px auto;
     padding: 5px;
     text-align: center;
-    justify-content: center;
-    align-items: center;
     transition: 0.4s;
     max-width: 900px;
 }
@@ -259,26 +326,34 @@ article#contato h2 {
     color: var(--cor3);
     text-align: center;
     font-size: 2em;
-    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 article#contato li a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     text-decoration: none;
     color: white;
     gap: 20px;
 }
 
-article#contato li {
-    flex-direction: column; 
+article#contato ul {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     padding: 0;
+}
+
+article#contato li {
+    display: flex;
+    flex-direction: wrap;
+    padding: 20px;
     gap: 15px;
     width: 250px;
-    height: 50px;
+    height: auto;
     padding: 0;
-    box-shadow: var(--cor3) 1px 1px 1px;
+    box-shadow: rgba(255, 255, 255, 0.1) 1px 1px 1px;
 }
 
 /* Estilização do rodapé */ 
@@ -291,6 +366,11 @@ footer {
 /* utilizando media querie para melhor resolução mobile do site */ 
 
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden; 
+        width: 100%;
+    }
+
     header {
         display: flex;
         flex-direction: column;

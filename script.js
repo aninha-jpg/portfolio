@@ -4,9 +4,7 @@ function btnparagrafo(){
 
     corpo.style.backgroundColor = "#31323e";
     corpo.style.color = "#ffffff";
-    corpo.style.boxShadow = "0px 2px 7px #60519b";
-
-    window.alert("É exatamente esse 'Ahh' que me move...")
+    corpo.style.boxShadow = "1px 2px 3px #60519b";
 
     setTimeout(() => {
         corpo.style.backgroundColor = "";
@@ -22,7 +20,7 @@ function typeWrite(letras){
     textArray.forEach(function(letra, i){
         setTimeout(function(){
             letras.innerHTML += letra;
-        }, 180 * i,)
+        }, 300 * i,)
     });
 }
 const maquinaTxtNome = document.querySelector(".maquina-txt")
