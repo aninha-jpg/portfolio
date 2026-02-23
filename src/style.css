@@ -186,6 +186,34 @@ button:hover {
     color: var(--cor1);
 }
 
+.container-cv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.btn-curriculo {
+    background-color: var(--cor3);
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.btn-curriculo:hover {
+    background-color: var(--cor2);
+    transform: scale(1.04);
+}
+
 /* Main - Estilização da seção ti e interesses */ 
 
 section#habilidades {
@@ -400,7 +428,17 @@ article#contato li a {
 
 footer {
     text-align: center;
-    
+    background-color: var(--cor2);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--cor4);
+}
+
+footer a:hover{
+    color: var(--cor3);
+    transition: 0.3s;
 }
 
 /* utilizando media querie para melhor resolução mobile do site */ 
@@ -416,6 +454,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: auto;
         min-height: 100dvh;
         text-align: center;
         margin-left: 0;
@@ -430,7 +469,7 @@ footer {
     }
 
     .maquina-txt {
-        font-size: 2em;
+        font-size: 1.8em;
     }
 
     .links {
@@ -446,15 +485,35 @@ footer {
         display: none;
     }
 
+    .esconder-tech {
+    display: none;
+    }
+
     .esconder-indice {
+        display: block;
+    }
+
+    section#habilidades, section#sobre, section#projetos{
+    margin: 10px;
+    height: auto;
+    min-height: 100dvh;
+    padding-top: 10px;
+    padding-bottom: 20px;
     display: block;
     }
 
-    section#habilidades, section#sobre, section#projetos, section#contato {
-    margin: 20px 10px;
-    min-height: auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    display: block;
-}
+    article#contato ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        gap: 15px;
+    }
+
+    article#contato li {
+        min-width: 120px;
+        max-width: 160px;
+    }
+
 }
