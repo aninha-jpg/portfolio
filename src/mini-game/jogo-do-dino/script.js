@@ -44,6 +44,14 @@ document.addEventListener('keypress', () => {
     }
 })
 
+document.addEventListener('touchstart', (e) => {
+    if(e.touches.length === 1){
+        if(!dino.classList.contains('jump-animation')){
+            jump();
+        }
+    }
+}, {passive: false});
+
 // definindo o estilo computado(top e left) do dinossauro e da caixa para fazer o loop do game
 
 // só mostra a pedra se o valor for positivo.

@@ -5,6 +5,14 @@
     --cor4: #bfc0d1;
 }
 
+/* impede que usuarios selecionem elementos sem quere */
+#dino, #box, #score, body {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
 body {
     background-color: var(--cor1);
     color: white;
