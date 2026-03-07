@@ -109,9 +109,14 @@ button:hover {
 }
 
 @media (max-width: 600px) {
+    @media (max-width: 600px) {
     #game, #score, #inicio {
-        transform: scale(1.5);
-        transform-origin: center;
-        margin-top: 100px;
+        zoom: 0.64;
+        margin-top: 50px;
     }
+    button {
+        padding: 15px;
+        width: 200px;
+    }
+}
 }

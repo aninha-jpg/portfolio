@@ -44,6 +44,12 @@ document.addEventListener('keypress', () => {
     }
 })
 
+document.addEventListener('mousedown', () => {
+    if(!dino.classList.contains('jump-animation')){
+        jump();
+    }
+})
+
 document.addEventListener('touchstart', (e) => {
     if(e.touches.length === 1){
         if(!dino.classList.contains('jump-animation')){
