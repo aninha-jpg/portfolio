@@ -1,0 +1,101 @@
+:root {
+    --cor1: #1e202c;
+    --cor2: #31323e;
+    --cor3: #60519b;
+    --cor4: #bfc0d1;
+}
+
+body {
+    background-color: var(--cor1);
+    color: white;
+    margin: 0 auto;
+}
+
+#score {
+    text-align: center;
+}
+
+#game {
+    width: 600px;
+    height: 300px;
+    border: 1px solid var(--cor3);
+    margin: auto;
+    background-image: url(image/fundo.png);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+#dino {
+    height: 75px;
+    width: 75px;
+    position: relative;
+    top: 225px;
+    background-image: url(image/dino-scaled.png);
+    background-size: cover;
+}
+
+#box {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 175px;
+    left: 550px;
+    background-image: url(image/box.png);
+    background-size: cover;
+}
+
+.box-animation {
+    animation: caixa 1.33s infinite;
+}
+
+@keyframes caixa {
+    0% {left: 550px;}
+    100%{left: -50px;}
+}
+
+.jump-animation {
+    animation: jump 0.5s;
+}
+
+@keyframes jump {
+    0% {top: 225px;}
+    50%{top: 75px;}
+    75%{top: 75px;}
+    100%{top: 225px;}
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor4);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--cor2);
+}
+
+button {
+    margin: 10px;
+    background-color: var(--cor2);
+    color: var(--cor4);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--cor3);
+    color: var(--cor4);
+}
+
+#inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
