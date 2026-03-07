@@ -29,6 +29,7 @@ Para a construção deste projeto, utilizei as seguintes ferramentas:
 - **Design Responsivo:** Interface adaptada para diferentes tamanhos de tela (Desktop, Tablet e Mobile).
 - **Seção de Projetos:** Exibição dos meus principais trabalhos com links diretos.
 - **Interatividade:** Uso de JavaScript para melhorar a experiência do usuário.
+- **Mini-Game:** Implementado um mini-game para jogar dentro do portfólio!!.
 
 ---
 
